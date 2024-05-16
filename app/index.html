@@ -1,12 +1,29 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="phonecatApp">
     <head>
         <meta charset="utf-8" />
         <title>My HTML File</title>
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
         <script src="lib/angular/angular.js"></script>
+        <script src="app.js"></script>
     </head>
-    <body>
-        <p>{{ (2 + 2) * 2 }}</p>
+    <body ng-controller="PhoneListController">
+        <p>Total number of phones: {{ numberPhones }}</p>
+
+        <ul>
+            <li ng-repeat="phone in phones">
+                <span>{{ phone.name }}</span>
+                <p>{{ phone.snippet }}</p>
+            </li>
+        </ul>
+
+        <table>
+            <tr>
+                <th>Row number</th>
+            </tr>
+            <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
+                <td>{{ i + 1 }}</td>
+            </tr>
+        </table>
     </body>
 </html>
