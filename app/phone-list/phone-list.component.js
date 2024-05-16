@@ -1,5 +1,4 @@
 angular.module("phonecatApp").component("phoneList", {
-    // This name is what AngularJS uses to match to the `<phone-list>` element.
     template:
         "<ul>" +
         '<li ng-repeat="phone in $ctrl.phones">' +
