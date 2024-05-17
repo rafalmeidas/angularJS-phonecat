@@ -2,6 +2,10 @@
 
 To run the end-2-end (e2e) tests against the application, we use [Protractor][protractor].
 
+## Install Java
+
+https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR
+
 ## Starting the Web Server
 
 First, we need the application to be running via the web-server.
@@ -26,6 +30,5 @@ Start the Protractor test runner, using the e2e configuration:
 ```
 npm run protractor
 ```
-
 
 [protractor]: https://github.com/angular/protractor
