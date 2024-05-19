@@ -5,7 +5,7 @@ exports.config = {
     specs: ["*.js"],
 
     capabilities: {
-        browserName: "chrome",
+        browserName: "firefox",
     },
 
     baseUrl: "http://localhost:8000/",
