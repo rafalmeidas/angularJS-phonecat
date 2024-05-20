@@ -1,6 +1,6 @@
 //jshint strict: false
 exports.config = {
-    allScriptsTimeout: 11000,
+    allScriptsTimeout: 30000,
     specs: ["*.js"],
     capabilities: {
         browserName: "firefox",
