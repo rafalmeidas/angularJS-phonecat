@@ -5,7 +5,6 @@
 describe("PhoneCat Application", function () {
     describe("phoneList", function () {
         beforeEach(function () {
-            browser.ignoreSynchronization = true;
             browser.get("index.html");
         });
 

@@ -10,4 +10,7 @@ exports.config = {
     jasmineNodeOpts: {
         defaultTimeoutInterval: 30000,
     },
+    onPrepare: function () {
+        browser.ignoreSynchronization = true;
+    },
 };
