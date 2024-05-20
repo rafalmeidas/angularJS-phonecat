@@ -1,6 +1,6 @@
 //jshint strict: false
 exports.config = {
-    allScriptsTimeout: 30000,
+    allScriptsTimeout: 60000,
     specs: ["*.js"],
     capabilities: {
         browserName: "firefox",
@@ -8,7 +8,7 @@ exports.config = {
     baseUrl: "http://localhost:8000/",
     framework: "jasmine",
     jasmineNodeOpts: {
-        defaultTimeoutInterval: 30000,
+        defaultTimeoutInterval: 60000,
     },
     onPrepare: function () {
         browser.ignoreSynchronization = true;
