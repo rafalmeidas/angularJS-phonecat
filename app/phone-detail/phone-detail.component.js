@@ -8,11 +8,15 @@ angular.module("phoneDetail").component("phoneDetail", {
         function PhoneDetailController($http, $routeParams) {
             var self = this;
 
+            self.setImage = function setImage(imageUrl) {
+                self.mainImageUrl = imageUrl;
+            };
+
             $http
                 .get(`phones/${$routeParams.phoneId}.json`)
                 .then(function (response) {
-                    console.log(response.data);
                     self.phone = response.data;
+                    self.mainImageUrl = self.phone.images[0];
                 });
         },
     ],

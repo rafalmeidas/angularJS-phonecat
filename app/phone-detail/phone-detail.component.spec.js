@@ -12,9 +12,10 @@ describe("phoneDetail", function () {
             $routeParams,
         ) {
             $httpBackend = _$httpBackend_;
-            $httpBackend
-                .expectGET("phones/xyz.json")
-                .respond({ name: "phone xyz" });
+            $httpBackend.expectGET("phones/xyz.json").respond({
+                name: "phone xyz",
+                images: ["img/phones/dell-streak-7.0.jpg"],
+            });
 
             $routeParams.phoneId = "xyz";
 
@@ -25,7 +26,10 @@ describe("phoneDetail", function () {
             expect(ctrl.phone).toBeUndefined();
 
             $httpBackend.flush();
-            expect(ctrl.phone).toEqual({ name: "phone xyz" });
+            expect(ctrl.phone).toEqual({
+                name: "phone xyz",
+                images: ["img/phones/dell-streak-7.0.jpg"],
+            });
         });
     });
 });

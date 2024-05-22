@@ -46,6 +46,7 @@ h1 {
     height: 100px;
     padding: 1em;
     width: 100px;
+    cursor: pointer;
 }
 
 .phone-thumbs li {
