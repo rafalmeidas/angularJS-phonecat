@@ -1,3 +1,3 @@
 "use strict";
 
-angular.module("phoneList", []);
+angular.module("phoneList", ["core.phone"]);
