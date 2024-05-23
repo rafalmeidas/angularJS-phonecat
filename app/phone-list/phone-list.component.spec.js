@@ -4,6 +4,10 @@ describe("phoneList", function () {
     describe("PhoneListController", function () {
         var $httpBackend, ctrl;
 
+        beforeEach(function () {
+            jasmine.addCustomEqualityTester(angular.equals);
+        });
+
         beforeEach(inject(function ($componentController, _$httpBackend_) {
             $httpBackend = _$httpBackend_;
             $httpBackend
@@ -14,7 +18,7 @@ describe("phoneList", function () {
         }));
 
         it("should create a `phones` property with 2 phones fetched with `$http`", function () {
-            expect(ctrl.phones).toBeUndefined();
+            expect(ctrl.phones).toEqual([]);
 
             $httpBackend.flush();
             expect(ctrl.phones).toEqual([

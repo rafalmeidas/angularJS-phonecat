@@ -6,6 +6,10 @@ describe("phoneDetail", function () {
     describe("PhoneDetailController", function () {
         var $httpBackend, ctrl;
 
+        beforeEach(function () {
+            jasmine.addCustomEqualityTester(angular.equals);
+        });
+
         beforeEach(inject(function (
             $componentController,
             _$httpBackend_,
@@ -23,7 +27,7 @@ describe("phoneDetail", function () {
         }));
 
         it("should fetch the phone details", function () {
-            expect(ctrl.phone).toBeUndefined();
+            expect(ctrl.phone).toEqual({});
 
             $httpBackend.flush();
             expect(ctrl.phone).toEqual({
