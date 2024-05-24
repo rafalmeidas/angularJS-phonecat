@@ -1,6 +1,8 @@
 angular
     .module("phonecatApp")
     .animation(".phone", function phoneAnimationFactory() {
+        var duration = 500;
+
         return {
             addClass: animateIn,
             removeClass: animateOut,
@@ -13,13 +15,14 @@ angular
                 .css({
                     display: "block",
                     position: "absolute",
-                    top: 500,
+                    top: -500,
                     left: 0,
                 })
                 .animate(
                     {
                         top: 0,
                     },
+                    duration,
                     done,
                 );
 
@@ -39,8 +42,9 @@ angular
                 })
                 .animate(
                     {
-                        top: -500,
+                        top: 500,
                     },
+                    duration,
                     done,
                 );
 
